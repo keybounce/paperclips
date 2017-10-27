@@ -170,7 +170,7 @@ h2 {
 }
 
 #tournamentStuff {
-    height: 58px;
+/*    height: 58px; */
 
 }
 
@@ -294,17 +294,17 @@ canvas {
 }
 #leftColumn {
   float: left ;
-  width: 275px;
+  width: 35%;
 }
 #middleColumn {
   float: left;
-  width: 275px;
-  margin-left: 10px;
+  width: 27%;
+  margin-left: 0.5%;
 }
 #rightColumn {
   float: left;
-  width: 320px;
-  margin-left: 10px;    
+  width: 36%;
+  margin-left: 0.5%;    
 }
 
 #investmentDiv1 {
@@ -403,7 +403,7 @@ canvas {
     margin-bottom: 10;
     border: 1px solid grey;
     padding: 5; 
-    height: 70px;
+    height: 5em;
     
 }
 
@@ -422,6 +422,7 @@ canvas {
 .engineText {
     margin-bottom: 0;
     margin-top: 0;
+	font-size: 80%;
     line-height: 150%;
 }
 
@@ -636,8 +637,8 @@ p.hypnoDrone {
 
 .projectButton {
     display: block;
-    height: 60px;
-    width: 275px;
+    height: 4em;
+    width: 100%;
     background: #c8c8c8;
     border: 1px solid rgba(0, 0, 0, 1);
     outline: none;
@@ -646,8 +647,8 @@ p.hypnoDrone {
 
 .projectButton:hover {
     display: block;
-    height: 60px;
-    width: 275px;
+    height: 4em;
+    width: 100%;
     background: #c8c8c8;
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
@@ -655,7 +656,7 @@ p.hypnoDrone {
 .projectButton:active {
     display: block;
     height: 60px;
-    width: 275px;
+    width: 100%;
     background: #d1d1d1;
     border: 1px solid rgba(0, 0, 0, 1);
     
