@@ -30,7 +30,7 @@
 #swarmSliderDiv {
     position: relative;
     display: inline-block;
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
 }
 
 #sliderLabelWork {
@@ -170,7 +170,7 @@ h2 {
 }
 
 #tournamentStuff {
-    height: 58px;
+/*    height: 58px; */
 
 }
 
@@ -195,7 +195,7 @@ h2 {
 }
 
 #harvesterMultiButtons {
-    margin-bottom: 2; 
+    margin-bottom: 2;
 }
 
 #wireDroneMultiButtons {
@@ -233,20 +233,20 @@ h2 {
 
 #increaseProbeTrustDiv {
   float: left;
-  width: 130px;  
+  width: 130px;
   margin-left: 5;
   border: 0;
 }
 
 #increaseMaxTrustDiv {
-  float: left;    
-  width: 150px;  
+  float: left;
+  width: 150px;
   margin: 0;
-  border: 0;    
+  border: 0;
 }
 
 #combatButtonDiv {
-  margin-top: 0;    
+  margin-top: 0;
 }
 
 #battleCanvasDiv {
@@ -262,7 +262,7 @@ h2 {
 canvas {
   display: block;
   margin-top: 0;
-  margin-bottom: 10;    
+  margin-bottom: 10;
   width: 310px;
   height: 150px;
   margin-left: auto;
@@ -273,7 +273,7 @@ canvas {
 #hypnoDroneEventDiv {
   
   float: left;
-  background: black;    
+  background: black;
   width: 100%;
 
 }
@@ -285,7 +285,7 @@ canvas {
 #consoleDiv {
   
   float: left;
-  background: black;    
+  background: black;
   width: 100%;
 }
 #topDIv {
@@ -294,74 +294,74 @@ canvas {
 }
 #leftColumn {
   float: left ;
-  width: 275px;
+  width: 35%;
 }
 #middleColumn {
   float: left;
-  width: 275px;
-  margin-left: 10px;
+  width: 27%;
+  margin-left: 0.5%;
 }
 #rightColumn {
   float: left;
-  width: 320px;
-  margin-left: 10px;    
+  width: 36%;
+  margin-left: 0.5%;
 }
 
 #investmentDiv1 {
   float: left;
-  width: 64px; 
-  line-height: 20%;    
+  width: 64px;
+  line-height: 20%;
 }
 
 #investmentDiv2 {
   float: left;
-  width: 65%; 
+  width: 65%;
   text-align: top;
-  margin-top: 0; 
-  margin-left: 5px;    
+  margin-top: 0;
+  margin-left: 5px;
 }
 
 #stratDiv1 {
   float: left;
-  width: 95px; 
-  line-height: 20%; 
+  width: 95px;
+  line-height: 20%;
 }
 
 #stratDiv2 {
   float: left;
-  width: 60%; 
+  width: 60%;
   text-align: top;
-  margin-top: 0; 
-  margin-left: 5px;   
+  margin-top: 0;
+  margin-left: 5px;
 }
 
 #vertPad {
   float: left;
-  width: 35%;    
+  width: 35%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11;     
+  font-size: 11;
 }
 
 #vertStrat {
   float: right;
   text-align: center;
-  width: 65%;    
+  width: 65%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11;     
+  font-size: 11;
 
 }
 
 #horizStrat {
-  float: left; 
+  float: left;
 
-  display: flex;    
+  display: flex;
   align-items: center;
 
-  justify-content: center;    
-  width: 25%;  
-  height: 56px;    
+  justify-content: center;
+  width: 25%;
+  height: 56px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11;     
+  font-size: 11;
 }
 
 #investmentEngineUpgrade {
@@ -384,26 +384,26 @@ canvas {
 .engine {
     margin: 5;
     border: 1px solid grey;
-    padding: 5; 
+    padding: 5;
 }
 
 .engine2 {
     margin: 5;
     border: 1px solid grey;
-    padding: 5; 
+    padding: 5;
 }
 
 .swarmEngine {
     margin-bottom: 5;
     border: 1px solid grey;
-    padding: 5; 
+    padding: 5;
 }
 
 .qEngine {
     margin-bottom: 10;
     border: 1px solid grey;
-    padding: 5; 
-    height: 70px;
+    padding: 5;
+    height: 5em;
     
 }
 
@@ -422,6 +422,7 @@ canvas {
 .engineText {
     margin-bottom: 0;
     margin-top: 0;
+	font-size: 80%;
     line-height: 150%;
 }
 
@@ -617,7 +618,7 @@ p.hypnoDrone {
 
 .pulsate {
     -webkit-animation: pulsate .5s ease-out;
-    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-iteration-count: infinite;
     opacity: 0.0;
     }
 
@@ -636,8 +637,8 @@ p.hypnoDrone {
 
 .projectButton {
     display: block;
-    height: 60px;
-    width: 275px;
+    height: 4em;
+    width: 100%;
     background: #c8c8c8;
     border: 1px solid rgba(0, 0, 0, 1);
     outline: none;
@@ -646,8 +647,8 @@ p.hypnoDrone {
 
 .projectButton:hover {
     display: block;
-    height: 60px;
-    width: 275px;
+    height: 4em;
+    width: 100%;
     background: #c8c8c8;
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
@@ -655,7 +656,7 @@ p.hypnoDrone {
 .projectButton:active {
     display: block;
     height: 60px;
-    width: 275px;
+    width: 100%;
     background: #d1d1d1;
     border: 1px solid rgba(0, 0, 0, 1);
     
