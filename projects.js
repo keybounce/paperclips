@@ -2428,7 +2428,7 @@ var project219 = {
     title: "Xavier Re-initialization ",
     priceTag: "(100,000 creat)",
     description: "Re-allocate accumulated trust",
-    trigger: function(){return spaceFlag == 0 && creativity>=100000},
+    trigger: function(){return humanFlag == 1 && creativity>=100000},
     uses: 1,
     cost: function(){return creativity>=100000},
     flag: 0,
