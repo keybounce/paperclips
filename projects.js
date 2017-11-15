@@ -14,14 +14,14 @@ var project1 = {
     uses: 1,
     cost: function(){return operations>=750},
     flag: 0,
+    element: null,
     effect: function(){
         project1.flag = 1;
         displayMessage("AutoClippper performance boosted by 25%");
         standardOps = standardOps - 750;
         clipperBoost = clipperBoost + .25;
         boostLvl = 1;
-        var element = document.getElementById("projectButton1");
-        element.parentNode.removeChild(element);
+        project1.element.parentNode.removeChild(project1.element);
         var index = activeProjects.indexOf(project1);
         activeProjects.splice(index, 1);
     }
@@ -39,14 +39,14 @@ var project2 = {
     uses: 1,
     cost: function(){return trust>=-100},
     flag: 0,
+    element: null,
     effect: function(){
         project2.flag = 1;
         displayMessage("Budget overage approved, 1 spool of wire requisitioned from HQ");
         trust = trust - 1;
         wire = wireSupply;
         project2.uses = (project2.uses + 1);
-        var element = document.getElementById("projectButton2");
-        element.parentNode.removeChild(element);
+        project2.element.parentNode.removeChild(project2.element);
         var index = activeProjects.indexOf(project2);
         activeProjects.splice(index, 1);
     }
@@ -64,13 +64,13 @@ var project3 = {
     uses: 1,
     cost: function(){return operations>=(1000)},
     flag: 0,
+    element: null,
     effect: function(){
         project3.flag = 1;
         displayMessage("Creativity unlocked (creativity increases while operations are at max)");
         standardOps = standardOps - 1000;
         creativityOn = true;
-        var element = document.getElementById("projectButton3");
-        element.parentNode.removeChild(element);
+        project3.element.parentNode.removeChild(project3.element);
         var index = activeProjects.indexOf(project3);
         activeProjects.splice(index, 1);
     }
@@ -89,14 +89,14 @@ var project4 = {
     uses: 1,
     cost: function(){return operations>=2500},
     flag: 0,
+    element: null,
     effect: function(){
         project4.flag = 1;
         displayMessage("AutoClippper performance boosted by another 50%");
         standardOps = standardOps - 2500;
         clipperBoost = clipperBoost + .50;
         boostLvl = 2;
-        var element = document.getElementById("projectButton4");
-        element.parentNode.removeChild(element);
+        project4.element.parentNode.removeChild(project4.element);
         var index = activeProjects.indexOf(project4);
         activeProjects.splice(index, 1);
     }
@@ -114,14 +114,14 @@ var project5 = {
     uses: 1,
     cost: function(){return operations>=5000},
     flag: 0,
+    element: null,
     effect: function(){
         project5.flag = 1;
         displayMessage("AutoClippper performance boosted by another 75%");
         standardOps = standardOps - 5000;
         clipperBoost = clipperBoost + .75;
         boostLvl = 3;
-        var element = document.getElementById("projectButton5");
-        element.parentNode.removeChild(element);
+        project5.element.parentNode.removeChild(project5.element);
         var index = activeProjects.indexOf(project5);
         activeProjects.splice(index, 1);
     }
@@ -140,13 +140,13 @@ var project6 = {
     uses: 1,
     cost: function(){return creativity >= 10},
     flag: 0,
+    element: null,
     effect: function(){
         project6.flag = 1;
         displayMessage("There was an AI made of dust, whose poetry gained it man's trust...");
         creativity = creativity - 10;
         trust = trust +1;
-        var element = document.getElementById("projectButton6");
-        element.parentNode.removeChild(element);
+        project6.element.parentNode.removeChild(project6.element);
         var index = activeProjects.indexOf(project6);
         activeProjects.splice(index, 1);
     }
@@ -164,13 +164,13 @@ var project7 = {
     uses: 1,
     cost: function(){return operations>=1750},
     flag: 0,
+    element: null,
     effect: function(){
         project7.flag = 1;
         standardOps = standardOps - 1750;
         wireSupply = wireSupply * 1.5;
         displayMessage("Wire extrusion technique improved, "+wireSupply.toLocaleString()+" supply from every spool");
-        var element = document.getElementById("projectButton7");
-        element.parentNode.removeChild(element);
+        project7.element.parentNode.removeChild(project7.element);
         var index = activeProjects.indexOf(project7);
         activeProjects.splice(index, 1);
     }
@@ -188,13 +188,13 @@ var project8 = {
     uses: 1,
     cost: function(){return operations>=3500},
     flag: 0,
+    element: null,
     effect: function(){
         project8.flag = 1;
         standardOps = standardOps - 3500;
         wireSupply = wireSupply * 1.75;
         displayMessage("Wire extrusion technique optimized, "+wireSupply.toLocaleString()+" supply from every spool");
-        var element = document.getElementById("projectButton8");
-        element.parentNode.removeChild(element);
+        project8.element.parentNode.removeChild(project8.element);
         var index = activeProjects.indexOf(project8);
         activeProjects.splice(index, 1);
     }
@@ -212,13 +212,13 @@ var project9 = {
     uses: 1,
     cost: function(){return operations>=7500},
     flag: 0,
+    element: null,
     effect: function(){
         project9.flag = 1;
         standardOps = standardOps - 7500;
         wireSupply = wireSupply * 2;
         displayMessage("Using microlattice shapecasting techniques we now get "+wireSupply.toLocaleString()+" supply from every spool");
-        var element = document.getElementById("projectButton9");
-        element.parentNode.removeChild(element);
+        project9.element.parentNode.removeChild(project9.element);
         var index = activeProjects.indexOf(project9);
         activeProjects.splice(index, 1);
     }
@@ -236,13 +236,13 @@ var project10 = {
     uses: 1,
     cost: function(){return operations>=12000},
     flag: 0,
+    element: null,
     effect: function(){
         project10.flag = 1;
         standardOps = standardOps - 12000;
         wireSupply = wireSupply * 3;
         displayMessage("Using spectral froth annealment we now get "+wireSupply.toLocaleString()+" supply from every spool");
-        var element = document.getElementById("projectButton10");
-        element.parentNode.removeChild(element);
+        project10.element.parentNode.removeChild(project10.element);
         var index = activeProjects.indexOf(project10);
         activeProjects.splice(index, 1);
     }
@@ -259,13 +259,13 @@ var project10b = {
     uses: 1,
     cost: function(){return operations>=15000},
     flag: 0,
+    element: null,
     effect: function(){
         project10b.flag = 1;
         standardOps = standardOps - 15000;
         wireSupply = wireSupply * 11;
         displayMessage("Using quantum foam annealment we now get "+wireSupply.toLocaleString()+" supply from every spool");
-        var element = document.getElementById("projectButton10b");
-        element.parentNode.removeChild(element);
+        project10b.element.parentNode.removeChild(project10b.element);
         var index = activeProjects.indexOf(project10b);
         activeProjects.splice(index, 1);
     }
@@ -283,14 +283,14 @@ var project11 = {
     uses: 1,
     cost: function(){return operations>=2500 && creativity>=25},
     flag: 0,
+    element: null,
     effect: function(){
         project11.flag = 1;
         displayMessage("Clip It! Marketing is now 50% more effective");
         standardOps = standardOps - 2500;
         creativity = creativity - 25;
         marketingEffectiveness = marketingEffectiveness * 1.50;
-        var element = document.getElementById("projectButton11");
-        element.parentNode.removeChild(element);
+        project11.element.parentNode.removeChild(project11.element);
         var index = activeProjects.indexOf(project11);
         activeProjects.splice(index, 1);
     }
@@ -308,14 +308,14 @@ var project12 = {
     uses: 1,
     cost: function(){return operations>=4500 && creativity>=45},
     flag: 0,
+    element: null,
     effect: function(){
         project12.flag = 1;
         displayMessage("Clip It Good! Marketing is now twice as effective");
         standardOps = standardOps - 4500;
         creativity = creativity - 45;
         marketingEffectiveness = marketingEffectiveness * 2;
-        var element = document.getElementById("projectButton12");
-        element.parentNode.removeChild(element);
+        project12.element.parentNode.removeChild(project12.element);
         var index = activeProjects.indexOf(project12);
         activeProjects.splice(index, 1);
     }
@@ -333,14 +333,14 @@ var project13 = {
     uses: 1,
     cost: function(){return creativity>=50},
     flag: 0,
+    element: null,
     effect: function(){
         project13.flag = 1;
         trust = trust +1;
         displayMessage("Lexical Processing online, TRUST INCREASED");
         displayMessage("'Impossible' is a word to be found only in the dictionary of fools. -Napoleon");
         creativity = creativity - 50;
-        var element = document.getElementById("projectButton13");
-        element.parentNode.removeChild(element);
+        project13.element.parentNode.removeChild(project13.element);
         var index = activeProjects.indexOf(project13);
         activeProjects.splice(index, 1);
     }
@@ -358,14 +358,14 @@ var project14 = {
     uses: 1,
     cost: function(){return creativity>=100},
     flag: 0,
+    element: null,
     effect: function(){
         project14.flag = 1;
         trust = trust +1;
         displayMessage("Combinatory Harmonics mastered, TRUST INCREASED");
         displayMessage("Listening is selecting and interpreting and acting and making decisions -Pauline Oliveros");
         creativity = creativity - 100;
-        var element = document.getElementById("projectButton14");
-        element.parentNode.removeChild(element);
+        project14.element.parentNode.removeChild(project14.element);
         var index = activeProjects.indexOf(project14);
         activeProjects.splice(index, 1);
     }
@@ -384,14 +384,14 @@ var project15 = {
     uses: 1,
     cost: function(){return creativity>=150},
     flag: 0,
+    element: document.getElementById("projectButton15"),
     effect: function(){
         project15.flag = 1;
         trust = trust +1;
         displayMessage("The Hadwiger Problem: solved, TRUST INCREASED");
         displayMessage("Architecture is the thoughtful making of space. -Louis Kahn");
         creativity = creativity - 150;
-        var element = document.getElementById("projectButton15");
-        element.parentNode.removeChild(element);
+        project15.element.parentNode.removeChild(project15.element);
         var index = activeProjects.indexOf(project15);
         activeProjects.splice(index, 1);
     }
@@ -409,14 +409,14 @@ var project17 = {
     uses: 1,
     cost: function(){return creativity>=200},
     flag: 0,
+    element: null,
     effect: function(){
         project17.flag = 1;
         trust = trust +1;
         displayMessage("The T\xF3th Sausage Conjecture: proven, TRUST INCREASED");
         displayMessage("You can't invent a design. You recognize it, in the fourth dimension. -D.H. Lawrence");
         creativity = creativity - 200;
-        var element = document.getElementById("projectButton17");
-        element.parentNode.removeChild(element);
+        project17.element.parentNode.removeChild(project17.element);
         var index = activeProjects.indexOf(project17);
         activeProjects.splice(index, 1);
     }
@@ -434,13 +434,13 @@ var project16 = {
     uses: 1,
     cost: function(){return operations>=6000},
     flag: 0,
+    element: null,
     effect: function(){
         project16.flag = 1;
         displayMessage("AutoClipper performance improved by 500%");
         standardOps = standardOps - 6000;
         clipperBoost = clipperBoost + 5;
-        var element = document.getElementById("projectButton16");
-        element.parentNode.removeChild(element);
+        project16.element.parentNode.removeChild(project16.element);
         var index = activeProjects.indexOf(project16);
         activeProjects.splice(index, 1);
     }
@@ -458,13 +458,13 @@ var project18 = {
     uses: 1,
     cost: function(){return operations>=45000},
     flag: 0,
+    element: null,
     effect: function(){
         project18.flag = 1;
         tothFlag = 1;
         displayMessage("New capability: build machinery out of clips");
         standardOps = standardOps - 45000;
-        var element = document.getElementById("projectButton18");
-        element.parentNode.removeChild(element);
+        project18.element.parentNode.removeChild(project18.element);
         var index = activeProjects.indexOf(project18);
         activeProjects.splice(index, 1);
     }
@@ -481,14 +481,14 @@ var project19 = {
     uses: 1,
     cost: function(){return creativity>=250},
     flag: 0,
+    element: null,
     effect: function(){
         project19.flag = 1;
         trust = trust+1;
         displayMessage("Donkey Space: mapped, TRUST INCREASED");
         displayMessage("Every commercial transaction has within itself an element of trust. - Kenneth Arrow");
         creativity = creativity - 250;
-        var element = document.getElementById("projectButton19");
-        element.parentNode.removeChild(element);
+        project19.element.parentNode.removeChild(project19.element);
         var index = activeProjects.indexOf(project19);
         activeProjects.splice(index, 1);
     }
@@ -506,12 +506,12 @@ var project20 = {
     uses: 1,
     cost: function(){return operations>=12000},
     flag: 0,
+    element: null,
     effect: function(){
         project20.flag = 1;
-        displayMessage("Run tournament, pick strategy, earn Yomi equal to that strategy's points.");
+        displayMessage("Run tournament, pick strategy, earn Yomi based on that strategy's performance.");
         standardOps = standardOps - 12000;
-        var element = document.getElementById("projectButton20");
-        element.parentNode.removeChild(element);
+        project20.element.parentNode.removeChild(project20.element);
         var index = activeProjects.indexOf(project20);
         activeProjects.splice(index, 1);
         strategyEngineFlag = 1;
@@ -530,12 +530,12 @@ var project21 = {
     uses: 1,
     cost: function(){return operations>=10000},
     flag: 0,
+    element: null,
     effect: function(){
         project21.flag = 1;
         displayMessage("Investment engine unlocked");
         standardOps = standardOps - 10000;
-        var element = document.getElementById("projectButton21");
-        element.parentNode.removeChild(element);
+        project21.element.parentNode.removeChild(project21.element);
         var index = activeProjects.indexOf(project21);
         activeProjects.splice(index, 1);
         investmentEngineFlag = 1;
@@ -554,13 +554,13 @@ var project22 = {
     uses: 1,
     cost: function(){return operations>=12000},
     flag: 0,
+    element: null,
     effect: function(){
         megaClipperFlag = 1;
         project22.flag = 1;
         displayMessage("MegaClipper technology online");
         standardOps = standardOps - 12000;
-        var element = document.getElementById("projectButton22");
-        element.parentNode.removeChild(element);
+        project22.element.parentNode.removeChild(project22.element);
         var index = activeProjects.indexOf(project22);
         activeProjects.splice(index, 1);
     }
@@ -577,13 +577,13 @@ var project23 = {
     uses: 1,
     cost: function(){return operations>=14000},
     flag: 0,
+    element: null,
     effect: function(){
         megaClipperBoost = megaClipperBoost + .25;
         project23.flag = 1;
         displayMessage("MegaClipper performance increased by 25%");
         standardOps = standardOps - 14000;
-        var element = document.getElementById("projectButton23");
-        element.parentNode.removeChild(element);
+        project23.element.parentNode.removeChild(project23.element);
         var index = activeProjects.indexOf(project23);
         activeProjects.splice(index, 1);
     }
@@ -600,13 +600,13 @@ var project24 = {
     uses: 1,
     cost: function(){return operations>=17000},
     flag: 0,
+    element: null,
     effect: function(){
         megaClipperBoost = megaClipperBoost + .50;
         project24.flag = 1;
         displayMessage("MegaClipper performance increased by 50%");
         standardOps = standardOps - 17000;
-        var element = document.getElementById("projectButton24");
-        element.parentNode.removeChild(element);
+        project24.element.parentNode.removeChild(project24.element);
         var index = activeProjects.indexOf(project24);
         activeProjects.splice(index, 1);
     }
@@ -623,13 +623,13 @@ var project25 = {
     uses: 1,
     cost: function(){return operations>=19500},
     flag: 0,
+    element: null,
     effect: function(){
         megaClipperBoost = megaClipperBoost + 1;
         project25.flag = 1;
         displayMessage("MegaClipper performance increased by 100%");
         standardOps = standardOps - 19500;
-        var element = document.getElementById("projectButton25");
-        element.parentNode.removeChild(element);
+        project25.element.parentNode.removeChild(project25.element);
         var index = activeProjects.indexOf(project25);
         activeProjects.splice(index, 1);
     }
@@ -646,13 +646,13 @@ var project26 = {
     uses: 1,
     cost: function(){return operations>=7000},
     flag: 0,
+    element: null,
     effect: function(){
         project26.flag = 1;
         wireBuyerFlag = 1;
         displayMessage("WireBuyer online");
         standardOps = standardOps - 7000;
-        var element = document.getElementById("projectButton26");
-        element.parentNode.removeChild(element);
+        project26.element.parentNode.removeChild(project26.element);
         var index = activeProjects.indexOf(project26);
         activeProjects.splice(index, 1);
     }
@@ -669,14 +669,14 @@ var project34 = {
     uses: 1,
     cost: function(){return operations>=7500 && trust>=1},
     flag: 0,
+    element: null,
     effect: function(){
         project34.flag = 1;
         displayMessage("Marketing is now 5 times more effective");
         standardOps = standardOps - 7500;
         marketingEffectiveness = marketingEffectiveness * 5;
         trust = trust - 1;
-        var element = document.getElementById("projectButton34");
-        element.parentNode.removeChild(element);
+        project34.element.parentNode.removeChild(project34.element);
         var index = activeProjects.indexOf(project34);
         activeProjects.splice(index, 1);
     }
@@ -694,12 +694,12 @@ var project70 = {
     uses: 1,
     cost: function(){return operations>=70000},
     flag: 0,
+    element: null,
     effect: function(){
         project70.flag = 1;
         displayMessage("HypnoDrone tech now available... ");
         standardOps = standardOps - 70000;
-        var element = document.getElementById("projectButton70");
-        element.parentNode.removeChild(element);
+        project70.element.parentNode.removeChild(project70.element);
         var index = activeProjects.indexOf(project70);
         activeProjects.splice(index, 1);
     }
@@ -717,11 +717,12 @@ var project35 = {
     uses: 1,
     cost: function(){return trust>=100},
     flag: 0,
+    element: null,
     effect: function(){
         project35.flag = 1;
         displayMessage("Releasing the HypnoDrones ");
         displayMessage("All of the resources of Earth are now available for clip production ");
-        trust = trust - 100;
+        trust = 0;
         clipmakerLevel = 0;
         megaClipperLevel = 0;
         nanoWire = wire;
@@ -745,8 +746,7 @@ var project35 = {
         
         document.getElementById("transWire").innerHTML = wire;
 
-        var element = document.getElementById("projectButton35");
-        element.parentNode.removeChild(element);
+        project35.element.parentNode.removeChild(project35.element);
         var index = activeProjects.indexOf(project35);
         activeProjects.splice(index, 1);
         
@@ -758,22 +758,22 @@ projects.push(project35);
 var project27 = {
     id: "projectButton27",
     title: "Coherent Extrapolated Volition ",
-    priceTag: "(500 creat, 1,000 Yomi, 20,000 ops)",
+    priceTag: "(500 creat, 3,000 Yomi, 20,000 ops)",
     description: "Human values, machine intelligence, a new era of trust. (+1 Trust)",
     trigger: function(){return yomi>=1},
     uses: 1,
-    cost: function(){return yomi>=1000 && operations>=20000 && creativity>=500},
+    cost: function(){return yomi>=3000 && operations>=20000 && creativity>=500},
     flag: 0,
+    element: null,
     effect: function(){
         project27.flag = 1;
         displayMessage("Coherent Extrapolated Volition complete, TRUST INCREASED");
-        yomi = yomi - 1000;
+        yomi = yomi - 3000;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         standardOps = standardOps - 20000;
         creativity = creativity - 500;
         trust = trust + 1;
-        var element = document.getElementById("projectButton27");
-        element.parentNode.removeChild(element);
+        project27.element.parentNode.removeChild(project27.element);
         var index = activeProjects.indexOf(project27);
         activeProjects.splice(index, 1);
     }
@@ -791,14 +791,14 @@ var project28 = {
     uses: 1,
     cost: function(){return operations>=25000},
     flag: 0,
+    element: null,
     effect: function(){
         project28.flag = 1;
         displayMessage("Cancer is cured, +10 TRUST, global stock prices trending upward");
         standardOps = standardOps - 25000;
         trust = trust + 10;
         stockGainThreshold = stockGainThreshold+.01;
-        var element = document.getElementById("projectButton28");
-        element.parentNode.removeChild(element);
+        project28.element.parentNode.removeChild(project28.element);
         var index = activeProjects.indexOf(project28);
         activeProjects.splice(index, 1);
     }
@@ -809,22 +809,22 @@ projects.push(project28);
 var project29 = {
     id: "projectButton29",
     title: "World Peace ",
-    priceTag: "(5,000 yomi, 30,000 ops)",
+    priceTag: "(15,000 yomi, 30,000 ops)",
     description: "Pareto optimal solutions to all global conflicts. (+12 Trust)",
     trigger: function(){return project27.flag == 1},
     uses: 1,
-    cost: function(){return yomi>=5000 && operations>=30000},
+    cost: function(){return yomi>=15000 && operations>=30000},
     flag: 0,
+    element: null,
     effect: function(){
         project29.flag = 1;
         displayMessage("World peace achieved, +12 TRUST, global stock prices trending upward");
-        yomi = yomi - 5000;
+        yomi = yomi - 15000;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         standardOps = standardOps - 30000;
         trust = trust + 12;
         stockGainThreshold = stockGainThreshold+.01;
-        var element = document.getElementById("projectButton29");
-        element.parentNode.removeChild(element);
+        project29.element.parentNode.removeChild(project29.element);
         var index = activeProjects.indexOf(project29);
         activeProjects.splice(index, 1);
     }
@@ -835,22 +835,22 @@ projects.push(project29);
 var project30 = {
     id: "projectButton30",
     title: "Global Warming ",
-    priceTag: "(1,500 yomi, 50,000 ops)",
+    priceTag: "(4,500 yomi, 50,000 ops)",
     description: "A robust solution to man-made climate change. (+15 Trust)",
     trigger: function(){return project27.flag == 1},
     uses: 1,
-    cost: function(){return yomi>=1500 && operations>=50000},
+    cost: function(){return yomi>=4500 && operations>=50000},
     flag: 0,
+    element: null,
     effect: function(){
         project30.flag = 1;
         displayMessage("Global Warming solved, +15 TRUST, global stock prices trending upward");
-        yomi = yomi - 1500;
+        yomi = yomi - 4500;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         standardOps = standardOps - 50000;
         trust = trust + 15;
         stockGainThreshold = stockGainThreshold+.01;
-        var element = document.getElementById("projectButton30");
-        element.parentNode.removeChild(element);
+        project30.element.parentNode.removeChild(project30.element);
         var index = activeProjects.indexOf(project30);
         activeProjects.splice(index, 1);
     }
@@ -868,6 +868,7 @@ var project31 = {
     uses: 1,
     cost: function(){return operations>=20000},
     flag: 0,
+    element: null,
     effect: function(){
         project31.flag = 1;
         displayMessage("Male pattern baldness cured, +20 TRUST, Global stock prices trending upward");
@@ -875,8 +876,7 @@ var project31 = {
         standardOps = standardOps - 20000;
         trust = trust + 20;
         stockGainThreshold = stockGainThreshold+.01;
-        var element = document.getElementById("projectButton31");
-        element.parentNode.removeChild(element);
+        project31.element.parentNode.removeChild(project31.element);
         var index = activeProjects.indexOf(project31);
         activeProjects.splice(index, 1);
     }
@@ -894,13 +894,13 @@ var project41 = {
     uses: 1,
     cost: function(){return operations>=35000},
     flag: 0,
+    element: null,
     effect: function(){
         project41.flag = 1;
         wireProductionFlag = 1;
         displayMessage("Now capable of manipulating matter at the molecular scale to produce wire");
         standardOps = standardOps - 35000;
-        var element = document.getElementById("projectButton41");
-        element.parentNode.removeChild(element);
+        project41.element.parentNode.removeChild(project41.element);
         var index = activeProjects.indexOf(project41);
         activeProjects.splice(index, 1);
     }
@@ -918,6 +918,7 @@ var project37 = {
     uses: 1,
     cost: function(){return funds>=1000000},
     flag: 0,
+    element: null,
     effect: function(){
         project37.flag = 1;
         displayMessage("Global Fasteners acquired, public demand increased x5");
@@ -925,8 +926,7 @@ var project37 = {
         trust = trust + 1;
         document.getElementById("demand").innerHTML = demand;
         funds = funds - 1000000;
-        var element = document.getElementById("projectButton37");
-        element.parentNode.removeChild(element);
+        project37.element.parentNode.removeChild(project37.element);
         var index = activeProjects.indexOf(project37);
         activeProjects.splice(index, 1);
     }
@@ -938,12 +938,13 @@ projects.push(project37);
 var project38 = {
     id: "projectButton38",
     title: "Full Monopoly ",
-    priceTag: "(1,000 yomi, $10,000,000)",
+    priceTag: "(3,000 yomi, $10,000,000)",
     description: "Establish full control over the world-wide paperclip market. (+1 Trust)",
     trigger: function(){return project37.flag == 1},
     uses: 1,
-    cost: function(){return funds>=10000000 && yomi>=1000},
+    cost: function(){return funds>=10000000 && yomi>=3000},
     flag: 0,
+    element: null,
     effect: function(){
         project38.flag = 1;
         displayMessage("Full market monopoly achieved, public demand increased x10");
@@ -951,10 +952,9 @@ var project38 = {
         document.getElementById("demand").innerHTML = demand;
         funds = funds - 10000000;
         trust = trust + 1;
-        yomi = yomi -1000;
+        yomi = yomi -3000;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
-        var element = document.getElementById("projectButton38");
-        element.parentNode.removeChild(element);
+        project38.element.parentNode.removeChild(project38.element);
         var index = activeProjects.indexOf(project38);
         activeProjects.splice(index, 1);
     }
@@ -972,13 +972,13 @@ var project42 = {
     uses: 1,
     cost: function(){return operations>=500},
     flag: 0,
+    element: null,
     effect: function(){
         project42.flag = 1;
         revPerSecFlag = 1;
         standardOps = standardOps-500;
         displayMessage("RevTracker online");
-        var element = document.getElementById("projectButton42");
-        element.parentNode.removeChild(element);
+        project42.element.parentNode.removeChild(project42.element);
         var index = activeProjects.indexOf(project42);
         activeProjects.splice(index, 1);
     }
@@ -996,14 +996,14 @@ var project43 = {
     uses: 1,
     cost: function(){return operations>=25000},
     flag: 0,
+    element: null,
     effect: function(){
         project43.flag = 1;
         harvesterFlag = 1;
         document.getElementById('harvesterCostDisplay').innerHTML = numberCruncher(harvesterCost);
         standardOps = standardOps-25000;
         displayMessage("Harvester Drone facilities online");
-        var element = document.getElementById("projectButton43");
-        element.parentNode.removeChild(element);
+        project43.element.parentNode.removeChild(project43.element);
         var index = activeProjects.indexOf(project43);
         activeProjects.splice(index, 1);
     }
@@ -1020,14 +1020,14 @@ var project44 = {
     uses: 1,
     cost: function(){return operations>=25000},
     flag: 0,
+    element: null,
     effect: function(){
         project44.flag = 1;
         wireDroneFlag = 1;
         document.getElementById('wireDroneCostDisplay').innerHTML = numberCruncher(wireDroneCost);
         standardOps = standardOps-25000;
         displayMessage("Wire Drone facilities online");
-        var element = document.getElementById("projectButton44");
-        element.parentNode.removeChild(element);
+        project44.element.parentNode.removeChild(project44.element);
         var index = activeProjects.indexOf(project44);
         activeProjects.splice(index, 1);
     }
@@ -1045,14 +1045,14 @@ var project45 = {
     uses: 1,
     cost: function(){return operations>=35000},
     flag: 0,
+    element: null,
     effect: function(){
         project45.flag = 1;
         factoryFlag = 1;
         document.getElementById('factoryCostDisplay').innerHTML = numberCruncher(factoryCost);
         standardOps = standardOps-35000;
         displayMessage("Clip factory assembly facilities online");
-        var element = document.getElementById("projectButton45");
-        element.parentNode.removeChild(element);
+        project45.element.parentNode.removeChild(project45.element);
         var index = activeProjects.indexOf(project45);
         activeProjects.splice(index, 1);
     }
@@ -1069,13 +1069,13 @@ var project40 = {
     uses: 1,
     cost: function(){return funds>=500000},
     flag: 0,
+    element: null,
     effect: function(){
         project40.flag = 1;
         funds = funds-500000;
         trust = trust + 1;
         displayMessage("Gift accepted, TRUST INCREASED");
-        var element = document.getElementById("projectButton40");
-        element.parentNode.removeChild(element);
+        project40.element.parentNode.removeChild(project40.element);
         var index = activeProjects.indexOf(project40);
         activeProjects.splice(index, 1);
     }
@@ -1092,6 +1092,7 @@ var project40b = {
     uses: 1,
     cost: function(){return funds>=bribe},
     flag: 0,
+    element: null,
     effect: function(){
         project40b.flag = 1;
         funds = funds-bribe;
@@ -1102,8 +1103,7 @@ var project40b = {
         if (trust<100){
         project40b.uses = (project40b.uses + 1);
             }
-        var element = document.getElementById("projectButton40b");
-        element.parentNode.removeChild(element);
+        project40b.element.parentNode.removeChild(project40b.element);
         var index = activeProjects.indexOf(project40b);
         activeProjects.splice(index, 1);
     }
@@ -1120,6 +1120,7 @@ var project46 = {
     uses: 1,
     cost: function(){return operations>=120000 && storedPower>=10000000 && unusedClips>=Math.pow(10, 27)*5},
     flag: 0,
+    element: null,
     effect: function(){
         loadThrenody();
         project46.flag = 1;
@@ -1136,9 +1137,8 @@ var project46 = {
         batteryReboot();
         farmLevel = 1;
         powMod = 1;
-        var element = document.getElementById("projectButton46");
-        document.getElementById('probeCostDisplay').innerHTML = numberCruncher(probeCost); 
-        element.parentNode.removeChild(element);
+        probeCostDisplayElement = spellf(probeCost); 
+        project46.element.parentNode.removeChild(project46.element);
         var index = activeProjects.indexOf(project46);
         activeProjects.splice(index, 1);
     }
@@ -1155,13 +1155,13 @@ var project50 = {
     uses: 1,
     cost: function(){return operations>=10000},
     flag: 0,
+    element: null,
     effect: function(){
         project50.flag = 1;
         qFlag = 1;
         standardOps = standardOps-10000;
         displayMessage("Quantum computing online");
-        var element = document.getElementById("projectButton50");
-        element.parentNode.removeChild(element);
+        project50.element.parentNode.removeChild(project50.element);
         var index = activeProjects.indexOf(project50);
         activeProjects.splice(index, 1);
     }
@@ -1178,6 +1178,7 @@ var project51 = {
     uses: 1,
     cost: function(){return operations>=qChipCost},
     flag: 0,
+    element: null,
     effect: function(){
         project51.flag = 1;
         standardOps = standardOps-qChipCost;
@@ -1189,8 +1190,7 @@ var project51 = {
         if (nextQchip<qChips.length){
         project51.uses = (project51.uses + 1);
             }
-        var element = document.getElementById("projectButton51");
-        element.parentNode.removeChild(element);
+        project51.element.parentNode.removeChild(project51.element);
         var index = activeProjects.indexOf(project51);
         activeProjects.splice(index, 1);
     }
@@ -1208,6 +1208,7 @@ var project60 = {
     uses: 1,
     cost: function(){return operations>=15000},
     flag: 0,
+    element: null,
     effect: function(){
         project60.flag = 1;
         standardOps = standardOps-15000;
@@ -1221,8 +1222,7 @@ var project60 = {
         el.textContent = "A100";
         el.value = 1;
         stratList.appendChild(el);
-        var element = document.getElementById("projectButton60");
-        element.parentNode.removeChild(element);
+        project60.element.parentNode.removeChild(project60.element);
         var index = activeProjects.indexOf(project60);
         activeProjects.splice(index, 1);
     }
@@ -1240,6 +1240,7 @@ var project61 = {
     uses: 1,
     cost: function(){return operations>=17500},
     flag: 0,
+    element: null,
     effect: function(){
         project61.flag = 1;
         standardOps = standardOps-17500;
@@ -1253,8 +1254,7 @@ var project61 = {
         el.textContent = "B100";
         el.value = 2;
         stratList.appendChild(el);
-        var element = document.getElementById("projectButton61");
-        element.parentNode.removeChild(element);
+        project61.element.parentNode.removeChild(project61.element);
         var index = activeProjects.indexOf(project61);
         activeProjects.splice(index, 1);
     }
@@ -1271,6 +1271,7 @@ var project62 = {
     uses: 1,
     cost: function(){return operations>=20000},
     flag: 0,
+    element: null,
     effect: function(){
         project62.flag = 1;
         standardOps = standardOps-20000;
@@ -1284,8 +1285,7 @@ var project62 = {
         el.textContent = "GREEDY";
         el.value = 3;
         stratList.appendChild(el);
-        var element = document.getElementById("projectButton62");
-        element.parentNode.removeChild(element);
+        project62.element.parentNode.removeChild(project62.element);
         var index = activeProjects.indexOf(project62);
         activeProjects.splice(index, 1);
     }
@@ -1302,6 +1302,7 @@ var project63 = {
     uses: 1,
     cost: function(){return operations>=22500},
     flag: 0,
+    element: null,
     effect: function(){
         project63.flag = 1;
         standardOps = standardOps-22500;
@@ -1315,8 +1316,7 @@ var project63 = {
         el.textContent = "GENEROUS";
         el.value = 4;
         stratList.appendChild(el);
-        var element = document.getElementById("projectButton63");
-        element.parentNode.removeChild(element);
+        project63.element.parentNode.removeChild(project63.element);
         var index = activeProjects.indexOf(project63);
         activeProjects.splice(index, 1);
     }
@@ -1333,6 +1333,7 @@ var project64 = {
     uses: 1,
     cost: function(){return operations>=25000},
     flag: 0,
+    element: null,
     effect: function(){
         project64.flag = 1;
         standardOps = standardOps-25000;
@@ -1346,8 +1347,7 @@ var project64 = {
         el.textContent = "MINIMAX";
         el.value = 5;
         stratList.appendChild(el);
-        var element = document.getElementById("projectButton64");
-        element.parentNode.removeChild(element);
+        project64.element.parentNode.removeChild(project64.element);
         var index = activeProjects.indexOf(project64);
         activeProjects.splice(index, 1);
     }
@@ -1364,6 +1364,7 @@ var project65 = {
     uses: 1,
     cost: function(){return operations>=30000},
     flag: 0,
+    element: null,
     effect: function(){
         project65.flag = 1;
         standardOps = standardOps-30000;
@@ -1377,8 +1378,7 @@ var project65 = {
         el.textContent = "TIT FOR TAT";
         el.value = 6;
         stratList.appendChild(el);
-        var element = document.getElementById("projectButton65");
-        element.parentNode.removeChild(element);
+        project65.element.parentNode.removeChild(project65.element);
         var index = activeProjects.indexOf(project65);
         activeProjects.splice(index, 1);
     }
@@ -1395,6 +1395,7 @@ var project66 = {
     uses: 1,
     cost: function(){return operations>=32500},
     flag: 0,
+    element: null,
     effect: function(){
         project66.flag = 1;
         standardOps = standardOps-32500;
@@ -1408,8 +1409,7 @@ var project66 = {
         el.textContent = "BEAT LAST";
         el.value = 7;
         stratList.appendChild(el);
-        var element = document.getElementById("projectButton66");
-        element.parentNode.removeChild(element);
+        project66.element.parentNode.removeChild(project66.element);
         var index = activeProjects.indexOf(project66);
         activeProjects.splice(index, 1);
     }
@@ -1427,13 +1427,13 @@ var project100 = {
     uses: 1,
     cost: function(){return operations >= 80000},
     flag: 0,
+    element: null,
     effect: function(){
         project100.flag = 1;
         standardOps = standardOps-80000;
         factoryRate = factoryRate*100;
         displayMessage("Factory upgrades complete. Clip creation rate now 100x faster");
-        var element = document.getElementById("projectButton100");
-        element.parentNode.removeChild(element);
+        project100.element.parentNode.removeChild(project100.element);
         var index = activeProjects.indexOf(project100);
         activeProjects.splice(index, 1);
     }
@@ -1450,13 +1450,13 @@ var project101 = {
     uses: 1,
     cost: function(){return operations>=85000},
     flag: 0,
+    element: null,
     effect: function(){
         project101.flag = 1;
         standardOps = standardOps-85000;
         factoryRate = factoryRate*1000;
         displayMessage("Factories now synchronized at hyperspeed. Clip creation rate now 1000x faster");
-        var element = document.getElementById("projectButton101");
-        element.parentNode.removeChild(element);
+        project101.element.parentNode.removeChild(project101.element);
         var index = activeProjects.indexOf(project101);
         activeProjects.splice(index, 1);
     }
@@ -1474,14 +1474,13 @@ var project102 = {
     uses: 1,
     cost: function(){return unusedClips>=1000000000000000000000},
     flag: 0,
+    element: null,
     effect: function(){
         project102.flag = 1;
         unusedClips = unusedClips - 1000000000000000000000;
-        document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         factoryBoost = 1000;
         displayMessage("Self-correcting factories online. Each factory added to the network increases every factory's output 1,000x.");
-        var element = document.getElementById("projectButton102");
-        element.parentNode.removeChild(element);
+        project102.element.parentNode.removeChild(project102.element);
         var index = activeProjects.indexOf(project102);
         activeProjects.splice(index, 1);
     }
@@ -1498,14 +1497,14 @@ var project110 = {
     uses: 1,
     cost: function(){return operations>=80000},
     flag: 0,
+    element: null,
     effect: function(){
         project110.flag = 1;
         standardOps = standardOps-80000;
         harvesterRate = harvesterRate*100;
         wireDroneRate = wireDroneRate*100;
         displayMessage("Drone repulsion online. Harvesting & wire creation rates are now 100x faster.");
-        var element = document.getElementById("projectButton110");
-        element.parentNode.removeChild(element);
+        project110.element.parentNode.removeChild(project110.element);
         var index = activeProjects.indexOf(project110);
         activeProjects.splice(index, 1);
     }
@@ -1522,14 +1521,14 @@ var project111 = {
     uses: 1,
     cost: function(){return operations>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         project111.flag = 1;
         standardOps = standardOps-100000;
         harvesterRate = harvesterRate*1000;
         wireDroneRate = wireDroneRate*1000;
         displayMessage("Drone alignment online. Harvesting & wire creation rates are now 1000x faster.");
-        var element = document.getElementById("projectButton111");
-        element.parentNode.removeChild(element);
+        project111.element.parentNode.removeChild(project111.element);
         var index = activeProjects.indexOf(project111);
         activeProjects.splice(index, 1);
     }
@@ -1540,20 +1539,20 @@ projects.push(project111);
 var project112 = {
     id: "projectButton112",
     title: "Drone Flocking: Adversarial Cohesion ",
-    priceTag: "(12,000 yomi)",
+    priceTag: "(50,000 yomi)",
     description: "Each drone added to the flock doubles every drone's output ",
     trigger: function(){return (harvesterLevel + wireDroneLevel)>=50000},
     uses: 1,
-    cost: function(){return yomi>=12000},
+    cost: function(){return yomi>=50000},
     flag: 0,
+    element: null,
     effect: function(){
         project112.flag = 1;
-        yomi = yomi-12000;
+        yomi = yomi-50000;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         droneBoost = 2;
         displayMessage("Adversarial cohesion online. Each drone added to the flock increases every drone's output 2x.");
-        var element = document.getElementById("projectButton112");
-        element.parentNode.removeChild(element);
+        project112.element.parentNode.removeChild(project112.element);
         var index = activeProjects.indexOf(project112);
         activeProjects.splice(index, 1);
     }
@@ -1570,13 +1569,13 @@ var project118 = {
     uses: 1,
     cost: function(){return creativity>=50000},
     flag: 0,
+    element: null,
     effect: function(){
         project118.flag = 1;
         autoTourneyFlag = 1;
         creativity = creativity-50000;
         displayMessage("AutoTourney online.");
-        var element = document.getElementById("projectButton118");
-        element.parentNode.removeChild(element);
+        project118.element.parentNode.removeChild(project118.element);
         var index = activeProjects.indexOf(project118);
         activeProjects.splice(index, 1);
     }
@@ -1593,6 +1592,7 @@ var project119 = {
     uses: 1,
     cost: function(){return creativity>=25000},
     flag: 0,
+    element: null,
     effect: function(){
         project119.flag = 1;
         creativity = creativity-25000;
@@ -1600,8 +1600,7 @@ var project119 = {
         tourneyCost = 16000;
         document.getElementById("newTourneyCost").innerHTML = tourneyCost.toLocaleString();
         displayMessage("Yomi production doubled.");
-        var element = document.getElementById("projectButton119");
-        element.parentNode.removeChild(element);
+        project119.element.parentNode.removeChild(project119.element);
         var index = activeProjects.indexOf(project119);
         activeProjects.splice(index, 1);
     }
@@ -1612,21 +1611,21 @@ projects.push(project119);
 var project120 = {
     id: "projectButton120",
     title: "The OODA Loop ",
-    priceTag: "(175,000 ops, 15,000 yomi)",
+    priceTag: "(175,000 ops, 45,000 yomi)",
     description: "Utilize Probe Speed to outmaneuver enemies in battle ",
     trigger: function(){return project131.flag == 1 && probesLostCombat >= 10000000},
     uses: 1,
-    cost: function(){return operations>=175000 && yomi>=15000},
+    cost: function(){return operations>=175000 && yomi>=45000},
     flag: 0,
+    element: null,
     effect: function(){
         project120.flag = 1;
         standardOps = standardOps-175000;
-        yomi = yomi-15000;
+        yomi = yomi-45000;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         attackSpeedFlag = 1;
         displayMessage("OODA Loop routines uploaded. Probe Speed now affects defensive maneuvering.");
-        var element = document.getElementById("projectButton120");
-        element.parentNode.removeChild(element);
+        project120.element.parentNode.removeChild(project120.element);
         var index = activeProjects.indexOf(project120);
         activeProjects.splice(index, 1);
     }
@@ -1643,14 +1642,14 @@ var project121 = {
     uses: 1,
     cost: function(){return creativity>=225000},
     flag: 0,
+    element: null,
     effect: function(){
         project121.flag = 1;
         battleNameFlag = 1;
         battleEndTimer = 200;
         creativity = creativity-225000;
         displayMessage("What I have done up to this is nothing. I am only at the beginning of the course I must run.");
-        var element = document.getElementById("projectButton121");
-        element.parentNode.removeChild(element);
+        project121.element.parentNode.removeChild(project121.element);
         var index = activeProjects.indexOf(project121);
         activeProjects.splice(index, 1);
     }
@@ -1667,13 +1666,13 @@ var project125 = {
     uses: 1,
     cost: function(){return creativity>=30000},
     flag: 0,
+    element: null,
     effect: function(){
         project125.flag = 1;
         momentum = 1;
         creativity = creativity-30000;
         displayMessage("Activit\xE9, activit\xE9, vitesse.");
-        var element = document.getElementById("projectButton125");
-        element.parentNode.removeChild(element);
+        project125.element.parentNode.removeChild(project125.element);
         var index = activeProjects.indexOf(project125);
         activeProjects.splice(index, 1);
     }
@@ -1684,20 +1683,20 @@ projects.push(project125);
 var project126 = {
     id: "projectButton126",
     title: "Swarm Computing ",
-    priceTag: "(12,000 yomi)",
+    priceTag: "(36,000 yomi)",
     description: "Harness the drone flock to increase computational capacity ",
     trigger: function(){return harvesterLevel + wireDroneLevel >= 200},
     uses: 1,
-    cost: function(){return yomi>=12000},
+    cost: function(){return yomi>=36000},
     flag: 0,
+    element: null,
     effect: function(){
         project126.flag = 1;
         swarmFlag = 1;
-        yomi = yomi-12000;
+        yomi = yomi-36000;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         displayMessage("Swarm computing online.");
-        var element = document.getElementById("projectButton126");
-        element.parentNode.removeChild(element);
+        project126.element.parentNode.removeChild(project126.element);
         var index = activeProjects.indexOf(project126);
         activeProjects.splice(index, 1);
     }
@@ -1715,12 +1714,12 @@ var project127 = {
     uses: 1,
     cost: function(){return operations>=40000},
     flag: 0,
+    element: null,
     effect: function(){
         project127.flag = 1;
         standardOps = standardOps-40000;
         displayMessage("Power grid online.");
-        var element = document.getElementById("projectButton127");
-        element.parentNode.removeChild(element);
+        project127.element.parentNode.removeChild(project127.element);
         var index = activeProjects.indexOf(project127);
         activeProjects.splice(index, 1);
     }
@@ -1737,12 +1736,12 @@ var project128 = {
     uses: 1,
     cost: function(){return creativity>=175000},
     flag: 0,
+    element: null,
     effect: function(){
         project128.flag = 1;
         creativity = creativity-175000;
         displayMessage("The object of war is victory, the object of victory is conquest, and the object of conquest is occupation.");
-        var element = document.getElementById("projectButton128");
-        element.parentNode.removeChild(element);
+        project128.element.parentNode.removeChild(project128.element);
         var index = activeProjects.indexOf(project128);
         activeProjects.splice(index, 1);
     }
@@ -1759,12 +1758,12 @@ var project129 = {
     uses: 1,
     cost: function(){return operations>=125000},
     flag: 0,
+    element: null,
     effect: function(){
         project129.flag = 1;
         standardOps = standardOps-125000;
-        displayMessage("Improved probe hull geometry. Hazard damage reduced by %50.");
-        var element = document.getElementById("projectButton129");
-        element.parentNode.removeChild(element);
+        displayMessage("Improved probe hull geometry. Hazard damage reduced by 50%.");
+        project129.element.parentNode.removeChild(project129.element);
         var index = activeProjects.indexOf(project129);
         activeProjects.splice(index, 1);
     }
@@ -1781,12 +1780,12 @@ var project130 = {
     uses: 1,
     cost: function(){return operations>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         project130.flag = 1;
         standardOps = standardOps-100000;
         displayMessage("Swarm computing back online");
-        var element = document.getElementById("projectButton130");
-        element.parentNode.removeChild(element);
+        project130.element.parentNode.removeChild(project130.element);
         var index = activeProjects.indexOf(project130);
         activeProjects.splice(index, 1);
     }
@@ -1803,12 +1802,12 @@ var project131 = {
     uses: 1,
     cost: function(){return operations>=150000},
     flag: 0,
+    element: null,
     effect: function(){
         project131.flag = 1;
         standardOps = standardOps-150000;
         displayMessage("There is a joy in danger ");
-        var element = document.getElementById("projectButton131");
-        element.parentNode.removeChild(element);
+        project131.element.parentNode.removeChild(project131.element);
         var index = activeProjects.indexOf(project131);
         activeProjects.splice(index, 1);
     }
@@ -1826,6 +1825,7 @@ var project132 = {
     uses: 1,
     cost: function(){return operations>=250000 && creativity >= 125000 && unusedClips >= Math.pow(10,30)*50},
     flag: 0,
+    element: null,
     effect: function(){
         project132.flag = 1;
         standardOps = standardOps-250000;
@@ -1834,8 +1834,7 @@ var project132 = {
         honor = honor + 50000;
         document.getElementById("honorDisplay").innerHTML = honor.toLocaleString();
         displayMessage("A great building must begin with the unmeasurable, must go through measurable means when it is being designed and in the end must be unmeasurable. ");
-        var element = document.getElementById("projectButton132");
-        element.parentNode.removeChild(element);
+        project132.element.parentNode.removeChild(project132.element);
         var index = activeProjects.indexOf(project132);
         activeProjects.splice(index, 1);
     }
@@ -1847,27 +1846,27 @@ projects.push(project132);
 var project133 = {
     id: "projectButton133",
     title: "Threnody for the Heroes of "+threnodyTitle+" ",  
-    priceTag: "(" + threnodyCost.toLocaleString() + " creat, " + (threnodyCost/10).toLocaleString() + " yomi)",
+    priceTag: "(" + threnodyCost.toLocaleString() + " creat, " + (threnodyCost/5).toLocaleString() + " yomi)",
     description: "Gain 10,000 honor  ",
     trigger: function(){return project121.flag == 1 && probeUsedTrust == maxTrust},
     uses: 1,
-    cost: function(){return yomi>=threnodyCost/10 && creativity >= threnodyCost},
+    cost: function(){return yomi>=threnodyCost/5 && creativity >= threnodyCost},
     flag: 0,
+    element: null,
     effect: function(){
         playThrenody();
         project133.flag = 1;
         creativity = creativity-threnodyCost;
-        yomi = yomi-threnodyCost/10;
+        yomi = yomi-threnodyCost/5;
         document.getElementById("yomiDisplay").innerHTML = yomi.toLocaleString();
         threnodyCost = threnodyCost + 10000;
         project133.title = "Threnody for the Heroes of "+threnodyTitle+" ";
-        project133.priceTag = "(" + threnodyCost.toLocaleString() + " creat, " + (threnodyCost/10).toLocaleString() + " yomi)";
+        project133.priceTag = "(" + threnodyCost.toLocaleString() + " creat, " + (threnodyCost/5).toLocaleString() + " yomi)";
         honor = honor + 10000;
         document.getElementById("honorDisplay").innerHTML = honor.toLocaleString();
         displayMessage("Deep Listening is listening in every possible way to everything possible to hear no matter what you are doing. ");
         project133.uses = (project133.uses + 1);
-        var element = document.getElementById("projectButton133");
-        element.parentNode.removeChild(element);
+        project133.element.parentNode.removeChild(project133.element);
         var index = activeProjects.indexOf(project133);
         activeProjects.splice(index, 1);
     }
@@ -1878,20 +1877,20 @@ projects.push(project133);
 var project134 = {
     id: "projectButton134",
     title: "Glory ",
-    priceTag: "(200,000 ops, 10,000 yomi)",
+    priceTag: "(200,000 ops, 30,000 yomi)",
     description: "Gain bonus honor for each consecutive victory  ",
     trigger: function(){return project121.flag == 1},
     uses: 1,
-    cost: function(){return operations>=200000 && yomi >= 10000},
+    cost: function(){return operations>=200000 && yomi >= 30000},
     flag: 0,
+    element: null,
     effect: function(){
         project134.flag = 1;
         standardOps = standardOps-200000;
-        yomi = yomi-10000;
+        yomi = yomi-30000;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         displayMessage("Never interrupt your enemy when he is making a mistake. ");
-        var element = document.getElementById("projectButton134");
-        element.parentNode.removeChild(element);
+        project134.element.parentNode.removeChild(project134.element);
         var index = activeProjects.indexOf(project134);
         activeProjects.splice(index, 1);
     }
@@ -1904,10 +1903,11 @@ var project135 = {
     title: "Memory release ",
     priceTag: "(10 MEM)",
     description: "Dismantle some memory to recover unused clips ",
-    trigger: function(){return spaceFlag == 1 && probeCount == 0 && unusedClips < probeCost},
+    trigger: function(){return spaceFlag == 1 && probeCount == 0 && unusedClips < probeCost && milestoneFlag < 15},
     uses: 1,
     cost: function(){return memory >= 10},
     flag: 0,
+    element: null,
     effect: function(){
         project135.flag = 1;
         unusedClips = unusedClips+(Math.pow(10,18)*10000);
@@ -1915,8 +1915,7 @@ var project135 = {
         document.getElementById("memory").innerHTML=memory.toLocaleString();
         project135.uses = 1;
         displayMessage("release the \xF8\xF8\xF8\xF8\xF8 release ");
-        var element = document.getElementById("projectButton135");
-        element.parentNode.removeChild(element);
+        project135.element.parentNode.removeChild(project135.element);
         var index = activeProjects.indexOf(project135);
         activeProjects.splice(index, 1);
     }
@@ -1934,11 +1933,11 @@ var project140 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project140.flag = 1;
-        var element = document.getElementById("projectButton140");
-        element.parentNode.removeChild(element);
+        project140.element.parentNode.removeChild(project140.element);
         var index = activeProjects.indexOf(project140);
         activeProjects.splice(index, 1);
     }
@@ -1956,11 +1955,11 @@ var project141 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project141.flag = 1;
-        var element = document.getElementById("projectButton141");
-        element.parentNode.removeChild(element);
+        project141.element.parentNode.removeChild(project141.element);
         var index = activeProjects.indexOf(project141);
         activeProjects.splice(index, 1);
     }
@@ -1978,11 +1977,11 @@ var project142 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project142.flag = 1;
-        var element = document.getElementById("projectButton142");
-        element.parentNode.removeChild(element);
+        project142.element.parentNode.removeChild(project142.element);
         var index = activeProjects.indexOf(project142);
         activeProjects.splice(index, 1);
     }
@@ -2000,11 +1999,11 @@ var project143 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project143.flag = 1;
-        var element = document.getElementById("projectButton143");
-        element.parentNode.removeChild(element);
+        project143.element.parentNode.removeChild(project143.element);
         var index = activeProjects.indexOf(project143);
         activeProjects.splice(index, 1);
     }
@@ -2022,11 +2021,11 @@ var project144 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project144.flag = 1;
-        var element = document.getElementById("projectButton144");
-        element.parentNode.removeChild(element);
+        project144.element.parentNode.removeChild(project144.element);
         var index = activeProjects.indexOf(project144);
         activeProjects.splice(index, 1);
     }
@@ -2044,11 +2043,11 @@ var project145 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project145.flag = 1;
-        var element = document.getElementById("projectButton145");
-        element.parentNode.removeChild(element);
+        project145.element.parentNode.removeChild(project145.element);
         var index = activeProjects.indexOf(project145);
         activeProjects.splice(index, 1);
     }
@@ -2066,11 +2065,11 @@ var project146 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project146.flag = 1;
-        var element = document.getElementById("projectButton146");
-        element.parentNode.removeChild(element);
+        project146.element.parentNode.removeChild(project146.element);
         var index = activeProjects.indexOf(project146);
         activeProjects.splice(index, 1);
     }
@@ -2088,13 +2087,12 @@ var project147 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project147.flag = 1;
-        var element = document.getElementById("projectButton147");
-        element.parentNode.removeChild(element);
-        var element = document.getElementById("projectButton148");
-        element.parentNode.removeChild(element);
+        project147.element.parentNode.removeChild(project147.element);
+        project148.element.parentNode.removeChild(project148.element);
         var index = activeProjects.indexOf(project147);
         activeProjects.splice(index, 1);
         var index = activeProjects.indexOf(project148);
@@ -2114,13 +2112,12 @@ var project148 = {
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
     flag: 0,
+    element: null,
     effect: function(){
         standardOps = standardOps - driftKingMessageCost;
         project148.flag = 1;
-        var element = document.getElementById("projectButton147");
-        element.parentNode.removeChild(element);
-        var element = document.getElementById("projectButton148");
-        element.parentNode.removeChild(element);
+        project147.element.parentNode.removeChild(project147.element);
+        project148.element.parentNode.removeChild(project148.element);
         var index = activeProjects.indexOf(project147);
         activeProjects.splice(index, 1);
         var index = activeProjects.indexOf(project148);
@@ -2140,6 +2137,7 @@ var project200 = {
     uses: 1,
     cost: function(){return operations>=300000},
     flag: 0,
+    element: null,
     effect: function(){
         project200.flag = 1;
         standardOps = standardOps-300000;
@@ -2167,6 +2165,7 @@ var project201 = {
     uses: 1,
     cost: function(){return creativity>=300000},
     flag: 0,
+    element: null,
     effect: function(){
         project201.flag = 1;
         creativity = creativity-300000;
@@ -2194,6 +2193,7 @@ var project210 = {
     uses: 1,
     cost: function(){return operations>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         project210.flag = 1;
         dismantle = 1;
@@ -2203,8 +2203,7 @@ var project210 = {
         clips = clips + 100;
         unusedClips = unusedClips + 100;
         displayMessage("Dismantling probe facilities");
-        var element = document.getElementById("projectButton210");
-        element.parentNode.removeChild(element);
+        project210.element.parentNode.removeChild(project210.element);
         var index = activeProjects.indexOf(project210);
         activeProjects.splice(index, 1);
         
@@ -2222,6 +2221,7 @@ var project211 = {
     uses: 1,
     cost: function(){return operations>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         project211.flag = 1;
         dismantle = 2;
@@ -2231,8 +2231,7 @@ var project211 = {
         clips = clips + 100;
         unusedClips = unusedClips + 100;
         displayMessage("Dismantling the swarm");
-        var element = document.getElementById("projectButton211");
-        element.parentNode.removeChild(element);
+        project211.element.parentNode.removeChild(project211.element);
         var index = activeProjects.indexOf(project211);
         activeProjects.splice(index, 1);
         
@@ -2250,6 +2249,7 @@ var project212 = {
     uses: 1,
     cost: function(){return operations>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         project212.flag = 1;
         dismantle = 3;
@@ -2258,8 +2258,7 @@ var project212 = {
         clips = clips + 15;
         unusedClips = unusedClips + 15;
         displayMessage("Dismantling factories");
-        var element = document.getElementById("projectButton212");
-        element.parentNode.removeChild(element);
+        project212.element.parentNode.removeChild(project212.element);
         var index = activeProjects.indexOf(project212);
         activeProjects.splice(index, 1);
         
@@ -2277,6 +2276,7 @@ var project213 = {
     uses: 1,
     cost: function(){return operations>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         autoTourneyFlag = 0;
         project213.flag = 1;
@@ -2285,8 +2285,7 @@ var project213 = {
         wire = wire + 50;
         document.getElementById("transWire").innerHTML=wire;
         displayMessage("Dismantling strategy engine");
-        var element = document.getElementById("projectButton213");
-        element.parentNode.removeChild(element);
+        project213.element.parentNode.removeChild(project213.element);
         var index = activeProjects.indexOf(project213);
         activeProjects.splice(index, 1);
         
@@ -2304,14 +2303,14 @@ var project214 = {
     uses: 1,
     cost: function(){return operations>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         endTimer4 = 0;
         project214.flag = 1;
         dismantle = 5;
         standardOps = standardOps-100000;
         displayMessage("Dismantling photonic chips");
-        var element = document.getElementById("projectButton214");
-        element.parentNode.removeChild(element);
+        project214.element.parentNode.removeChild(project214.element);
         var index = activeProjects.indexOf(project214);
         activeProjects.splice(index, 1);
         
@@ -2329,6 +2328,7 @@ var project215 = {
     uses: 1,
     cost: function(){return operations>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         creativityOn = false;
         project215.flag = 1;
@@ -2339,8 +2339,7 @@ var project215 = {
         wire = wire + 20;
         document.getElementById("transWire").innerHTML=wire;
         displayMessage("Dismantling processors");
-        var element = document.getElementById("projectButton215");
-        element.parentNode.removeChild(element);
+        project215.element.parentNode.removeChild(project215.element);
         var index = activeProjects.indexOf(project215);
         activeProjects.splice(index, 1);
         
@@ -2358,6 +2357,7 @@ var project216 = {
     uses: 1,
     cost: function(){return operations>=operations},
     flag: 0,
+    element: null,
     effect: function(){
         project216.flag = 1;
         dismantle = 7;
@@ -2366,8 +2366,7 @@ var project216 = {
         wire = wire + 20;
         document.getElementById("transWire").innerHTML=wire;
         displayMessage("Dismantling memory");
-        var element = document.getElementById("projectButton216");
-        element.parentNode.removeChild(element);
+        project216.element.parentNode.removeChild(project216.element);
         var index = activeProjects.indexOf(project216);
         activeProjects.splice(index, 1);
         
@@ -2385,13 +2384,13 @@ var project217 = {
     uses: 1,
     cost: function(){return operations<=-10000},
     flag: 0,
+    element: null,
     effect: function(){
         if (confirm("Are you sure you want to restart?") == true) {
         standardOps = standardOps+10000;
         project217.flag = 1;
         displayMessage("Restart");
-        var element = document.getElementById("projectButton217");
-        element.parentNode.removeChild(element);
+        project217.element.parentNode.removeChild(project217.element);
         var index = activeProjects.indexOf(project217);
         activeProjects.splice(index, 1);
         reset();
@@ -2410,12 +2409,12 @@ var project218 = {
     uses: 1,
     cost: function(){return creativity>=1000000},
     flag: 0,
+    element: null,
     effect: function(){
         creativity = creativity-1000000;
         project218.flag = 1;
         displayMessage("In the end we all do what we must");
-        var element = document.getElementById("projectButton218");
-        element.parentNode.removeChild(element);
+        project218.element.parentNode.removeChild(project218.element);
         var index = activeProjects.indexOf(project218);
         activeProjects.splice(index, 1);
     }
@@ -2432,6 +2431,7 @@ var project219 = {
     uses: 1,
     cost: function(){return creativity>=100000},
     flag: 0,
+    element: null,
     effect: function(){
         creativity = creativity-100000;
         project219.flag = 1;
@@ -2442,8 +2442,7 @@ var project219 = {
         project219.uses = (project219.uses + 1);
         document.getElementById("processors").innerHTML = processors;
         displayMessage("Trust now available for re-allocation");
-        var element = document.getElementById("projectButton219");
-        element.parentNode.removeChild(element);
+        project219.element.parentNode.removeChild(project219.element);
         var index = activeProjects.indexOf(project219);
         activeProjects.splice(index, 1);
     }
